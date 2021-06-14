@@ -1,0 +1,108 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+
+@for $var from 2 through 9 {
+  .fw-#{$var}#{"00"} {
+    font-weight: #{$var}#{"00"};
+  }
+}
+
+@for $var from 2 through 9 {
+  .fw-#{$var}#{"00"} {
+    font-weight: #{$var}#{"00"};
+  }
+}
+
+$font-size: (
+  8,
+  10,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  20,
+  21,
+  22,
+  24,
+  27,
+  28,
+  31,
+  32,
+  40,
+  44,
+  48,
+  50,
+  52,
+  56,
+  80,
+  96
+);
+$font-md-size: (40, 52);
+
+@media print {
+  @each $var in $font-size {
+    .text-pr-#{$var} {
+      font-size: #{$var}rem;
+    }
+  }
+}
+
+@each $var in $font-size {
+  .text-#{$var} {
+    font-size: #{$var}px;
+  }
+  .btn.text-#{$var} {
+    font-size: #{$var}px !important;
+    * {
+      font-size: #{$var}px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  @each $var in $font-md-size {
+    .text-md-#{$var} {
+      font-size: #{$var}px;
+    }
+    .btn.text-md-#{$var} {
+      font-size: #{$var}px !important;
+      * {
+        font-size: #{$var}px !important;
+      }
+    }
+  }
+}
+
+$line-heights: (135, 160, 165, 170, 180, 200, 225);
+
+@each $var in $line-heights {
+  .lh-#{$var} {
+    line-height: #{($var, 100)};
+  }
+}
+.lh-0 {
+  line-height: 0;
+}
+
+.break-keep {
+  word-break: keep-all !important;
+}
+.break-initial {
+  word-break: initial !important;
+  word-wrap: break-word;
+}
+.underline {
+  text-decoration: underline !important;
+}
+
+.text-noto {
+  font-family: "Noto Sans KR", sans-serif;
+}
+p.p-desc {
+  font-family: "Noto Sans KR", sans-serif;
+}
