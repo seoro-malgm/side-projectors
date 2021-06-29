@@ -6,7 +6,7 @@
     >
       <b-row class="my-auto" align-h="center">
         <b-col cols="10" md="5">
-          <p class="text-center text-16 p-desc">
+          <!-- <p class="text-center text-16 p-desc">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam illo
             temporibus, dolorem maxime reiciendis error nostrum velit ad
             voluptatibus animi repudiandae saepe voluptas soluta doloribus eaque
@@ -18,10 +18,10 @@
             dolorem maxime reiciendis error nostrum velit ad voluptatibus animi
             repudiandae saepe voluptas soluta doloribus eaque earum, obcaecati
             harum eius.
-          </p>
+          </p> -->
         </b-col>
       </b-row>
-      <PlayerLine class="mt-auto" :items="items" />
+      <!-- <PlayerLine class="mt-auto" :items="items" /> -->
     </b-container>
   </div>
 </template>
@@ -30,7 +30,7 @@
 import Home from "@/components/Home/index";
 export default {
   components: {
-    PlayerLine: Home.PlayerLine,
+    // PlayerLine: Home.PlayerLine,
   },
   name: "Home",
   data() {
@@ -43,7 +43,7 @@ export default {
         },
         {
           name: "나호정",
-          subject: "해수욕장",
+          subject: "바다",
           project: "Soon",
         },
         {
