@@ -21,16 +21,18 @@ div,
 section,
 ul {
   &::-webkit-scrollbar {
-    // display: none !important;
-    width: 4px;
+    display: none;
+    // width: 4px;
     // background-color: #ededed;
   }
   &::-webkit-scrollbar-thumb {
-    width: 4px !important;
-    background-color: $primary !important;
-    border-radius: 1rem;
+    display: none;
+    // width: 4px ;
+    // background-color: $primary;
+    // border-radius: 1rem;
   }
 }
+
 body {
   overflow-x: hidden;
   color: rgba($color: #000000, $alpha: 1);
@@ -44,51 +46,73 @@ body {
   overflow-x: hidden;
 }
 
-// path: "/", Home
-.player-el {
-  position: relative;
-  border-top: 4px solid $primary;
-  cursor: pointer;
-  z-index: 5;
-  color: $primary;
-  transition: 2.3s;
-  .vl {
-    // vertical line
-    width: 4px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 14rem;
-    z-index: 3;
-    background-color: $primary;
-    content: "";
-    transition: 1s;
-  }
-
-  &::after {
-    display: block;
-    position: absolute;
-    content: "";
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color: $primary, $alpha: 0.3);
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
-  }
-  &:hover {
-    color: $secondary;
-    .vl {
-      background-color: $secondary;
-    }
-    &::after {
-      transform: translateX(0);
-      background-color: rgba($color: $primary, $alpha: 1);
-    }
-  }
+// nav
+nav {
+  padding: 0.5rem;
+  border-bottom: 2px solid #222;
 }
+
+$max-height: calc(100vh - 56px);
+
+// path: "/", Home
+.home-wrapper {
+  display: flex;
+  align-items: stretch;
+  max-height: $max-height;
+  overflow-y: hidden;
+}
+
+.player-line {
+  height: 100%;
+  margin: 0;
+  max-height: $max-height;
+  border-left: 1px solid #222;
+  border-right: 1px solid #222;
+}
+// .player-el {
+//   position: relative;
+//   border-top: 4px solid $primary;
+//   cursor: pointer;
+//   z-index: 5;
+//   color: $primary;
+//   transition: 2.3s;
+//   .vl {
+//     // vertical line
+//     width: 4px;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 14rem;
+//     z-index: 3;
+//     background-color: $primary;
+//     content: "";
+//     transition: 1s;
+//   }
+
+//   &::after {
+//     display: block;
+//     position: absolute;
+//     content: "";
+//     z-index: 2;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba($color: $primary, $alpha: 0.3);
+//     top: 0;
+//     left: 0;
+//     transform: translateX(-100%);
+//     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+//   }
+//   &:hover {
+//     color: $secondary;
+//     .vl {
+//       background-color: $secondary;
+//     }
+//     &::after {
+//       transform: translateX(0);
+//       background-color: rgba($color: $primary, $alpha: 1);
+//     }
+//   }
+// }
 
 //
 

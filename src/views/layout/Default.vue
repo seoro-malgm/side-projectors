@@ -4,7 +4,7 @@
     <main>
       <router-view />
     </main>
-    <global-footer />
+    <!-- <global-footer /> -->
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import Nav from "@/components/Nav/index";
 export default {
   components: {
     GlobalNav: Nav.GlobalNav,
-    GlobalFooter: Nav.GlobalFooter,
+    // GlobalFooter: Nav.GlobalFooter,
   },
 };
 </script>

@@ -1,33 +1,26 @@
 <template>
-  <div class="home">
-    <b-container
-      fluid
-      class="d-flex flex-column align-items-center justify-content-center min-vh-100"
+  <b-container fluid class="home-wrapper">
+    <transition-group
+      name="player-line"
+      tag="div"
+      class="row align-items-start m-0 w-100 min-vh-100"
     >
-      <b-row class="my-auto" align-h="center">
-        <b-col cols="10" md="5">
-          <!-- <p class="text-center text-16 p-desc">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam illo
-            temporibus, dolorem maxime reiciendis error nostrum velit ad
-            voluptatibus animi repudiandae saepe voluptas soluta doloribus eaque
-            earum, obcaecati harum eius. Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Ullam illo temporibus, dolorem maxime reiciendis
-            error nostrum velit ad voluptatibus animi repudiandae saepe voluptas
-            soluta doloribus eaque earum, obcaecati harum eius. Lorem ipsum
-            dolor sit amet consectetur, adipisicing elit. Ullam illo temporibus,
-            dolorem maxime reiciendis error nostrum velit ad voluptatibus animi
-            repudiandae saepe voluptas soluta doloribus eaque earum, obcaecati
-            harum eius.
-          </p> -->
-        </b-col>
-      </b-row>
-      <!-- <PlayerLine class="mt-auto" :items="items" /> -->
-    </b-container>
-  </div>
+      <b-col
+        cols="3"
+        v-for="(item, i) in items"
+        :key="`${i}-item.name`"
+        class="player-line py-3 px-0"
+        :style="{ overflowY: 'auto' }"
+        v-show="show > i"
+      >
+        <component :is="item.component" />
+      </b-col>
+    </transition-group>
+  </b-container>
 </template>
 
 <script>
-import Home from "@/components/Home/index";
+import Projects from "./Projects/index";
 export default {
   components: {
     // PlayerLine: Home.PlayerLine,
@@ -35,31 +28,41 @@ export default {
   name: "Home",
   data() {
     return {
+      show: 0,
       items: [
         {
-          name: "김도현",
-          subject: "현관문",
-          project: "Soon",
+          name: "전우주",
+          subject: "삼성전자",
+          component: Projects.Sam,
         },
         {
           name: "나호정",
           subject: "바다",
-          project: "Soon",
+          component: Projects.Beach,
         },
         {
           name: "이상준",
           subject: "팬티",
-          project: "PantyRun",
+          component: Projects.PantyRun,
         },
+
         {
-          name: "전우주",
-          subject: "삼성전자",
-          project: "Soon",
+          name: "김도현",
+          subject: "현관문",
+          component: Projects.Door,
         },
       ],
     };
   },
+  mounted() {
+    setTimeout(() => {
+      setInterval(() => {
+        if (this.show > this.items.length) return;
+        this.show += 1;
+      }, 300);
+    }, 2400);
+  },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
