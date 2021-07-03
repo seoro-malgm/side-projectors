@@ -1,13 +1,13 @@
-// .player-line-enter-active,
-// .player-line-leave-active {
-//   transition: all 0.5s;
-// }
-// .player-line-enter,
-// .player-line-leave-to {
-//   transform: translateY(45px);
-//   opacity: 0;
-//   border-width: 0;
-// }
+.player-line-enter-active,
+.player-line-leave-active {
+  transition: all 0.5s;
+}
+.player-line-enter,
+.player-line-leave-to {
+  transform: translateY(45px);
+  opacity: 0;
+  border-width: 0;
+}
 
 .player-line-enter-active {
   animation: player-line 0.5s;
@@ -26,6 +26,26 @@
   100% {
     transform: translateY(0);
     height: 100%;
+    opacity: 1;
+  }
+}
+
+.fade-show-enter-active {
+  animation: fade-show 0.5s;
+  animation-delay: 3s;
+  transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+.fade-show-leave-active {
+  animation: fade-show 0.5s reverse;
+}
+@keyframes fade-show {
+  0% {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }

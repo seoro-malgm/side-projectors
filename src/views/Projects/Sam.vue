@@ -1,6 +1,11 @@
 <template>
   <div>
-    <h1 class="text-96 text-center">전</h1>
+    <article class="my-2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ipsum quod
+      illo, reiciendis at fugiat inventore nihil repellat autem fugit
+      asperiores. Quas obcaecati nemo error cum possimus dolorum illo
+      perferendis.
+    </article>
   </div>
 </template>
 

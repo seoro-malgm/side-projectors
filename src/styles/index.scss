@@ -37,11 +37,10 @@ body {
   overflow-x: hidden;
   color: rgba($color: #000000, $alpha: 1);
   font-size: 1rem;
-  font-family: "Black Han Sans", "Noto Sans KR", sans-serif;
+  font-family: "SF_HailSnow", "Noto Sans KR", sans-serif;
   font-size: 1rem;
   letter-spacing: -0.03rem;
 }
-
 #app {
   overflow-x: hidden;
 }
@@ -114,11 +113,50 @@ $max-height: calc(100vh - 56px);
 //   }
 // }
 
-//
+// 작업물 이미지
+figure img {
+  cursor: zoom-in;
+}
 
 // 커서 cursor
 .cursor-pointer {
   cursor: pointer;
+}
+
+// 버튼 buttons
+.close-line {
+  width: 48px;
+  height: 2px;
+  // margin: 3px 0;
+  background-color: white;
+  &:first-child {
+    transform: rotate(45deg);
+  }
+  &:last-child {
+    transform: rotate(-45deg);
+  }
+}
+
+// modal
+.modal-header {
+  margin: 0.25rem 0;
+  border-width: 0;
+  .close {
+    padding: 0;
+    font-size: 36pt;
+    color: $white;
+  }
+}
+.modal-content {
+  border-radius: 0;
+  border-width: 0;
+  background-color: transparent;
+}
+.modal-body {
+  padding: 0 !important;
+}
+.modal-backdrop {
+  opacity: 0.9;
 }
 
 // reset : bootstrap에 있는 기본 것들을 리셋할때 사용
