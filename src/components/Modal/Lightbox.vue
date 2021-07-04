@@ -1,5 +1,5 @@
 <template>
-  <b-modal id="modal-lightbox" hide-footer size="xl">
+  <b-modal id="modal-lightbox" :hide-footer="!image.caption" size="lg">
     <!-- <b-btn
       @click="close"
       variant="text"
@@ -13,6 +13,13 @@
       <div class="close-line" />
     </b-btn> -->
     <img :src="image.src" :alt="image.alt" />
+    <template #modal-footer>
+      <p
+        class="mt-3 mx-0 py-2 text-16 text-lg-20 text-white border-top border-bottom border-white border-2"
+      >
+        {{ image.caption }}
+      </p>
+    </template>
   </b-modal>
 </template>
 
@@ -32,10 +39,11 @@ export default {
     },
   },
   mounted() {
-    this.$root.$on("image::clicked", ({ src, alt }) => {
+    this.$root.$on("image::clicked", ({ src, alt, caption }) => {
       this.image = {
         src,
         alt,
+        caption,
       };
     });
   },

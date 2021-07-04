@@ -4,7 +4,7 @@
       class="w-100"
       :src="src"
       :alt="alt"
-      @click="showLightbox({ src, alt })"
+      @click="showLightbox({ src, alt, caption })"
     />
     <figcaption v-if="caption">
       {{ caption }}

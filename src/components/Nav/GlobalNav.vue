@@ -4,18 +4,18 @@
       <nav id="gnb" class="d-flex justify-content-between" v-if="show">
         <b-btn
           variant="text"
-          class="logo p-0 rounded-circle"
+          class="logo px-2 py-1 rounded-circle"
           :class="logoClass(logoIdx)"
           href="/"
         >
-          <span class="text-24 d-none d-md-block">
+          <span class="text-20 d-none d-md-block">
             전나이김
           </span>
           <span class="text-16 d-block d-md-none">
             ㅈㄴㅇㄱ
           </span>
         </b-btn>
-        <b-btn variant="text" class="p-0 rounded-circle" v-b-toggle.info>
+        <b-btn variant="text" class="py-0 px-2 rounded-circle" v-b-toggle.info>
           <span class="text-16 d-none d-md-block">
             INFO
           </span>
@@ -42,14 +42,14 @@
       </p>
       <section class="mt-4 mb-3">
         <h3 class="text-14 text-md-18">
-          연락처
+          연락처? sns 주소??
         </h3>
+        <ul class="list-unstyled px-2 mt-2">
+          <li class="mb-3" v-for="i in 4" :key="i">
+            @seoro-malgm
+          </li>
+        </ul>
       </section>
-      <ul class="list-unstyled">
-        <li class="mb-3">
-          dd
-        </li>
-      </ul>
     </b-sidebar>
   </div>
 </template>

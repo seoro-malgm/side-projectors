@@ -31,10 +31,13 @@ i.icon {
   width: 24px;
   min-width: 24px;
   height: 24px;
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: contain;
   position: relative;
   // input 위에 올라갈경우 input이 포커스일 때, 아이콘이 가려지는 경우가 있어서 임의로 z-index를 넣음
   z-index: 2;
@@ -82,6 +85,46 @@ i.icon {
       min-width: #{$var}#{px};
       width: #{$var}#{px};
       height: #{$var}#{px};
+    }
+  }
+}
+
+// caret icon
+.btn-caret {
+  .icon-caret {
+    .caret-line {
+      width: 16px;
+      height: 2px;
+      transition: 0.3s;
+      background-color: $black;
+      &:first-child {
+        transform: translate(1px, -0px) rotate(24deg);
+      }
+      &:last-child {
+        transform: translate(-1px, 0px) rotate(-24deg);
+      }
+    }
+    .emoji {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s;
+    }
+  }
+  &:hover,
+  &.not-collapsed {
+    .caret-line {
+      &:first-child {
+        transform: scale(3, 1) translate(2px, -18px) rotate(0deg);
+      }
+      &:last-child {
+        transform: scale(3, 1) translate(-2px, 18px) rotate(0deg);
+      }
+    }
+    .emoji {
+      opacity: 1;
     }
   }
 }
