@@ -8,8 +8,11 @@ import "./styles/index.scss";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-
 import "./plugins/common";
+
+import VueMeta from "vue-meta";
+Vue.use(VueMeta);
+
 import Modals from "./components/Modal/index";
 import ImageElement from "./components/ImageElement";
 Vue.component("Lightbox", Modals.Lightbox);

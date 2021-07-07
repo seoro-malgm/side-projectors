@@ -82,6 +82,9 @@
 <script>
 import Projects from "@/views/Projects/index";
 export default {
+  metaInfo: {
+    title: "전나이김",
+  },
   components: {
     // PlayerLine: Home.PlayerLine,
   },

@@ -1,5 +1,5 @@
 <template>
-  <b-modal id="modal-lightbox" :hide-footer="!image.caption" size="lg">
+  <b-modal id="modal-lightbox" :hide-footer="!image.caption" size="xl">
     <!-- <b-btn
       @click="close"
       variant="text"
