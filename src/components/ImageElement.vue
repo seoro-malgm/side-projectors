@@ -1,12 +1,14 @@
 <template>
   <figure class="mb-2">
-    <img
-      class="w-100"
-      :src="src"
-      :alt="alt"
-      @click="showLightbox({ src, alt, caption })"
-    />
-    <figcaption v-if="caption">
+    <div class="wrap">
+      <img
+        class="w-100"
+        :src="src"
+        :alt="caption"
+        @click="showLightbox({ src, alt, caption })"
+      />
+    </div>
+    <figcaption v-if="caption" class="text-14">
       {{ caption }}
     </figcaption>
   </figure>
@@ -30,4 +32,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+figcaption {
+  font-style: italic;
+  opacity: 0.5;
+}
+</style>

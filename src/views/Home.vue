@@ -35,7 +35,10 @@
             class="border-bottom border-2 border-black"
           >
             <header class="position-relative py-2">
-              <h1 class="text-48 text-md-96 text-center border-black">
+              <h1
+                class="text-48 text-md-96 text-center border-black"
+                v-b-toggle="`${i}-${item.name}-m`"
+              >
                 {{ item.name[0] }}
               </h1>
               <b-btn
