@@ -15,7 +15,7 @@
     <img :src="image.src" :alt="image.alt" />
     <template #modal-footer>
       <p
-        class="mt-3 mx-0 w-100 py-2 text-16 text-lg-20 text-white border-top border-bottom border-white border-2"
+        class="mt-3 mx-0 w-100 py-2 text-16 text-lg-20 text-white border-top border-bottom border-white border-1"
       >
         {{ image.caption }}
       </p>

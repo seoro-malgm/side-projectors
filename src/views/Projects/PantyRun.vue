@@ -3,10 +3,10 @@
     <section class="mb-5">
       <image-element
         :src="require('@/assets/Projects/lee/000.png')"
-        caption="<빤쓰런, 우리의 런은 도망이 아니다> 포스터 전체, 일러스트 버전과 레터링 버전, A1 사이즈"
+        caption="[빤쓰런, 우리의 런은 도망이 아니다] 포스터 전체, 일러스트 버전과 레터링 버전, 594 x 841mm"
       />
       <article>
-        <h1>&lt;빤쓰런, 우리의 런은 도망이 아니다&gt;</h1>
+        <h1>[빤쓰런, 우리의 런은 도망이 아니다]</h1>
         <p class="desc">
           빤쓰런 포스터는 MZ세대의 조기 퇴사를 주제로 제작하였다. 한 구직사이트
           조사 결과, MZ세대의 1년 이내 조기 퇴사자 비율이 높은 이유로 '개인의
@@ -25,7 +25,7 @@
     <section class="mb-5">
       <image-element
         :src="require('@/assets/Projects/lee/001.png')"
-        caption="빤쓰런 포스터, 일러스트 버전, 세로형, A1 사이즈"
+        caption="빤쓰런 포스터, 일러스트 버전, 세로형, 594 x 841mm"
       />
       <p class="desc">
         일러스트 버전의 포스터이다. 앞서 설명한 발돋음을 표현하기 위해 그 열정이
@@ -45,7 +45,7 @@
     <section class="mb-5">
       <image-element
         :src="require('@/assets/Projects/lee/003.png')"
-        caption="빤쓰런 포스터, 레터링 버전, 가로형, A1 사이즈"
+        caption="빤쓰런 포스터, 레터링 버전, 가로형, 594 x 841mm"
       />
       <p class="desc">
         같은 주제를 가지고 일러스트 버전 외에 레터링 버전 포스터도 함께

@@ -48,7 +48,7 @@ body {
 // nav
 nav {
   padding: 0.5rem;
-  border-bottom: 2px solid #222;
+  border-bottom: 1px solid #222;
 }
 
 $max-height: calc(100vh - 56px);
@@ -66,7 +66,9 @@ $max-height: calc(100vh - 56px);
   margin: 0;
   max-height: $max-height;
   border-left: 1px solid #222;
-  border-right: 1px solid #222;
+  &:first-child {
+    border-left-width: 0;
+  }
 }
 // .player-el {
 //   position: relative;
@@ -217,6 +219,10 @@ hr {
 p.desc {
   margin-bottom: 8px;
 }
+// 글
+strong {
+  font-weight: 700;
+}
 
 // reset : bootstrap에 있는 기본 것들을 리셋할때 사용
 h1,
@@ -236,6 +242,15 @@ figure,
 p {
   margin: 0;
   margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
 }
 
 .btn,

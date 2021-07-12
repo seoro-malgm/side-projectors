@@ -16,9 +16,14 @@
             v-show="show > i"
           >
             <h1
-              class="text-48 text-md-96 text-center border-bottom border-2 border-black"
+              class="py-3  text-center border-bottom border-1 border-black"
+              :style="{ minHeight: '88px' }"
             >
-              {{ item.name[0] }}
+              <img
+                :src="require(`@/assets/${item.firstName}.svg`)"
+                :style="{ width: '3rem', height: 'auto' }"
+                :alt="item.name"
+              />
             </h1>
             <component :is="item.component" />
           </b-col>
@@ -32,14 +37,18 @@
             v-for="(item, i) in items"
             :key="`${i}-${item.name}-m`"
             v-show="show > i"
-            class="border-bottom border-2 border-black"
+            class="border-bottom border-1 border-black"
           >
             <header class="position-relative py-2">
               <h1
-                class="text-48 text-md-96 text-center border-black"
+                class="py-2 text-48 text-md-96 text-center border-black"
                 v-b-toggle="`${i}-${item.name}-m`"
               >
-                {{ item.name[0] }}
+                <img
+                  :src="require(`@/assets/${item.firstName}.svg`)"
+                  :style="{ width: '3rem', height: 'auto' }"
+                  :alt="item.name"
+                />
               </h1>
               <b-btn
                 variant="text"
@@ -64,7 +73,7 @@
             <b-collapse
               accordion="player"
               :id="`${i}-${item.name}-m`"
-              class="pb-3 border-top border-2 border-black"
+              class="pb-3 border-top border-1 border-black"
             >
               <component :is="item.component" />
             </b-collapse>
@@ -99,18 +108,21 @@ export default {
       items: [
         {
           name: "전우주",
+          firstName: "jeon",
           subject: "삼성전자",
           component: Projects.Sam,
           emoji: "🐜",
         },
         {
           name: "나호정",
+          firstName: "na",
           subject: "바다",
           component: Projects.Beach,
           emoji: "🐢",
         },
         {
           name: "이상준",
+          firstName: "lee",
           subject: "팬티",
           component: Projects.PantyRun,
           emoji: "🚩",
@@ -118,6 +130,7 @@ export default {
 
         {
           name: "김도현",
+          firstName: "kim",
           subject: "현관문",
           component: Projects.Door,
           emoji: "🚪",
