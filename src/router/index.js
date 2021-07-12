@@ -6,7 +6,7 @@ import Layout from "@/views/layout/index";
 
 import Home from "@/views/Home.vue";
 import Soon from "@/views/Soon.vue";
-import Projects from "@/views/Projects/index";
+// import Projects from "@/views/Projects/index";
 
 Vue.use(VueRouter);
 
@@ -21,23 +21,23 @@ const routes = [
       },
     ],
   },
-  {
-    path: "/project",
-    component: Layout.Project,
-    children: [
-      {
-        path: "panty-run",
-        component: Layout.PantyRun,
-        children: [
-          {
-            path: "",
-            name: "PantyRun",
-            component: Projects.PantyRun,
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   path: "/project",
+  //   component: Layout.Project,
+  //   children: [
+  //     {
+  //       path: "panty-run",
+  //       component: Layout.PantyRun,
+  //       children: [
+  //         {
+  //           path: "",
+  //           name: "PantyRun",
+  //           component: Projects.PantyRun,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     path: "/:pathMatch(.*)*",
     component: Layout.Default,
